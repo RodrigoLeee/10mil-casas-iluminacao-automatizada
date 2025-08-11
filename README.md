@@ -87,7 +87,7 @@ A estrutura proposta é: **Moradia** → **Gateway Local (1 por casa)** → **Ag
 
 ### Visão 5: Plataformas, Ferramentas e Linguagens (Com o Quê)
 
-*   **Código Edge / Gateway:** Node.js ou Python são excelentes escolhas, dada a experiência com JavaScript e Python. A biblioteca MQTT.js é uma boa opção para Node.js.
+*   **Código Edge / Gateway:** Node.js ou Python são excelentes escolhas. A biblioteca MQTT.js é uma boa opção para Node.js.
 *   **Firmware do Dispositivo:** C/C++ com ESP-IDF/Arduino para o firmware do ESP32.
 *   **Broker MQTT:** EMQX para escalabilidade em larga escala.
 *   **Backend:** Python (com FastAPI) para a construção de microsserviços conteinerizados.
