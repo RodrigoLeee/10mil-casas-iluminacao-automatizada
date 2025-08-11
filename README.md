@@ -63,7 +63,7 @@ Esta visão detalha a arquitetura e os componentes que serão utilizados para co
 **Arquitetura Lógica em Camadas:**
 
 *   **Camada de Dispositivo (por casa):** Inclui sensores (SA para presença/atuação, SP para passagem), atuadores (AT para controle de luz, como relés), e microcontroladores (como ESP32) conectados a um **Gateway Local**. Este gateway, que pode ser um Raspberry Pi ou similar, executa um cliente MQTT leve e a lógica de controle local. Sua responsabilidade principal é garantir baixa latência nas ações críticas.
-*   **Gateway/Edge por Casa:** Este componente processa eventos, aplica regras locais, armazena logs temporariamente, gerencia atualizações OTA para os dispositivos e replica eventos para um agregador regional. É crucial para manter a baixa latência.
+*   **Gateway/Edge por Casa:** Este componente processa eventos, aplica regras locais, armazena logs temporariamente, gerencia atualizações OTA para os dispositivos e replica eventos para um agregador regional. É essencial para manter a baixa latência.
 *   **Agregador Regional:** Um cluster de brokers MQTT e microsserviços de ingestão, responsável por coletar dados de múltiplos gateways (por exemplo, por bairro ou região). Este nível agrega logs, aplica políticas e reduz a carga no backend central.
 *   **Backend Central (Nuvem):** Consiste em serviços REST/WebSocket, bancos de dados para configuração, painel administrativo, ferramentas de análise e sistemas de alerta (SMS/push).
 *   **Operações/Manutenção:** Inclui ferramentas para telemetria, logs centralizados e sistemas de alerta.
